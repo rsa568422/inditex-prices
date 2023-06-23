@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.inditex.prices</groupId>
+    <artifactId>inditex-prices-model</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <prices.version.lombok> 1.18.26 </prices.version.lombok>
+        <prices.version.commons-lang3> 3.12.0 </prices.version.commons-lang3>
+        <prices.version.junit-jupiter> 5.9.2 </prices.version.junit-jupiter>
+        <prices.version.mockito-core> 5.2.0 </prices.version.mockito-core>
+        <prices.version.mockito-junit-jupiter> 5.2.0 </prices.version.mockito-junit-jupiter>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${prices.version.lombok}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${prices.version.commons-lang3}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${prices.version.junit-jupiter}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>${prices.version.mockito-core}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <version>${prices.version.mockito-junit-jupiter}</version>
+        </dependency>
+    </dependencies>
+
+</project>
