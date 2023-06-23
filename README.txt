@@ -46,3 +46,5 @@ Se agrega la clase de configuración RepositoryConfig en la que podemos establec
 
 Versión de Java: 11
 Cobertura del código con las pruebas: 78%
+
+http://localhost:8080/swagger-ui/index.html
