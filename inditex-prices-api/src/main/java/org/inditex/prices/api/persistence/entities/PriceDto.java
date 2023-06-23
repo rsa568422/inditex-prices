@@ -6,6 +6,7 @@ import org.iditex.prices.model.entities.Price;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.Objects;
 
 @Entity
 @Getter
@@ -41,16 +42,19 @@ public class PriceDto {
     private String curr;
 
     public Price toModel() {
-        return null;
+        return new Price(priceList, brand.toModel(), product.toModel(), startDate, endDate, priority, price, curr);
     }
 
     @Override
     public boolean equals(Object o) {
-        return false;
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        PriceDto dto = (PriceDto) o;
+        return Objects.equals(priceList, dto.priceList) && Objects.equals(brand, dto.brand) && Objects.equals(product, dto.product) && Objects.equals(startDate, dto.startDate) && Objects.equals(endDate, dto.endDate) && Objects.equals(priority, dto.priority) && Objects.equals(price, dto.price) && Objects.equals(curr, dto.curr);
     }
 
     @Override
     public int hashCode() {
-        return 0;
+        return Objects.hash(priceList, brand, product, startDate, endDate, priority, price, curr);
     }
 }

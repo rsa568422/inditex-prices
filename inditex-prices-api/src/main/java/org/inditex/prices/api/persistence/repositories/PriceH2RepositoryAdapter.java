@@ -22,6 +22,9 @@ public class PriceH2RepositoryAdapter implements PriceRepository {
 
     @Override
     public List<Price> findByBrandIdAndProductIdAndDate(Long brandId, Long productId, Date date) {
-        return null;
+        return repository.findByBrandIdAndProductIdAndDate(brandId, productId, date)
+                .stream()
+                .map(PriceDto::toModel)
+                .collect(Collectors.toList());
     }
 }

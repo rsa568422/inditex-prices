@@ -22,7 +22,7 @@ public class BrandDto {
     private String name;
 
     public Brand toModel() {
-        return null;
+        return new Brand(id, name);
     }
 
 }

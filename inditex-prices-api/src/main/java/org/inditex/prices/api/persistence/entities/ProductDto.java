@@ -22,7 +22,7 @@ public class ProductDto {
     private String name;
 
     public Product toModel() {
-        return null;
+        return new Product(id, name);
     }
 
 }
