@@ -30,11 +30,11 @@ public class Price implements Comparable<Price> {
     private String curr;
 
     public boolean isApplicable(Date date) {
-        return false;
+        return !startDate.after(date) && !endDate.before(date);
     }
 
     @Override
     public int compareTo(Price o) {
-        return 0;
+        return priority.compareTo(o.getPriority());
     }
 }

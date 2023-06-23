@@ -11,11 +11,11 @@ public interface PriceRepository {
     List<Price> findByBrandIdAndProductIdAndDate(Long brandId, Long productId, Date date);
 
     default Optional<Price> findApplicablePrice(Long brandId, Long productId, Date date) {
-        return Optional.empty();
+        return filterMaxPriority(findByBrandIdAndProductIdAndDate(brandId, productId, date));
     }
 
     private static Optional<Price> filterMaxPriority(List<Price> prices) {
-        return Optional.empty();
+        return prices.stream().max(Price::compareTo);
     }
 
 }
